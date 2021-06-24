@@ -1,0 +1,8 @@
+<h2>Pitch Categories</h2>
+<ul id="pitch-categories">
+    <li><a href="{{url_for('main.index')}}">View all Pitches</a></li>
+    <li><a href="{{url_for('main.pitch_category', category = 'Product Pitch')}}">New Pitch Product Pitches</a> </li>
+    <li><a href="{{url_for('main.pitch_category', category = 'Interview Pitch')}}">Interviews and Entertainment Pitches</a></li>
+    <li><a href="{{url_for('main.pitch_category', category = 'Idea Pitch')}}"> Technological & Idea Pitch</a></li>
+    <li><a href="{{url_for('main.new_pitch', uname= current_user.username)}}">New Treads </a></li>
+</ul>
