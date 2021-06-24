@@ -1,0 +1,33 @@
+
+<!-- Styles block -->
+<nav class="navbar">
+<a class="navbar-brand" href="{{url_for('main.index')}}">PitchBaze Arena</a>
+  <div class="buttons" id="float-nav">
+    <ul id="nav-list">
+        {% if current_user.is_authenticated %}
+      <li>
+        <button type="button" class="btn btn-sm btn-outline-warning" style="margin-right: 10px;" >
+        <a href="{{ url_for('auth.logout')}}">Log Out</a>
+      </button>
+      </li>
+        {% if current_user.profile_pic_path %}
+      <li>
+      <a href="{{url_for('main.profile', uname= current_user.username)}}"><img src="{{url_for('static', filename = current_user.profile_pic_path)}}" alt="..."class="prof-pic"></a>
+      </li>
+        {% else %}
+        <li>
+        <a href="{{url_for('main.profile', uname= current_user.username)}}"><img src="{{url_for('static', filename = 'photos/default.png')}}" alt="..." class="prof-pic"></a>
+        </li>
+        {% endif %}
+        {% else %}
+      <li>
+        <button class="btn btn-outline-success my-2 my-sm-0" style="margin-right: 10px;" type="submit">
+          <a href="{{url_for('auth.login')}}">Log in</a>
+        </button>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+
+
