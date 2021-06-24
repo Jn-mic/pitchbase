@@ -1,0 +1,2 @@
+Hey {{user.username}}
+Welcome to an amazing baze for all your blogs. we register our kindly appreciation for signing up and be part of  service team.
