@@ -2,9 +2,9 @@
 
 {% block content %}
 <div class="container">
-<div class="row">
+    <div class="row">
     <div class="col-md-4" >
-    <div class="card mb-3">
+        <div class="card mb-3">
         {% if user.profile_pic_path %}
         <img src= "{{url_for('static', filename = user.profile_pic_path)}}" alt="" 
         class="img_thumbnail">
@@ -19,49 +19,47 @@
         </form>
             {% endif %}
         </div>
-    </div>
+        </div>
     </div>
     <div class="col-md-8" style="margin-left: 0px;">
-    <div class="card" id="user-bio">
-    <div class="card-header" id="bio-header">
-        <h3>{{user.username}}</h3>
-    </div>
+        <div class="card" id="user-bio">
+        <div class="card-header" id="bio-header">
+            <h3>{{user.username}}</h3>
+        </div>
         <div class="card-body">
             {% if user.bio %}
-            <p> {{user.bio}}</p>
+                <p> {{user.bio}}</p>
             {% else %}
-            <div class="alert alert-light">
+        <div class="alert alert-light">
             <p>User does not have any background Information</p>
-            </div>
+        </div>
             {% endif %}
         </div>
             {% if user == current_user %}
         <div class="card-footer">
-        <button class="btn btn-sm" id="updateprof-btn"><a href="{{url_for('main.update_profile', uname = user.username)}}">Update User Profile</a></button>
+            <button class="btn btn-sm" id="updateprof-btn"><a href="{{url_for('main.update_profile', uname = user.username)}}">Update Profile</a></button>
         </div>
             {% endif %}
     </div>
     </div>
-</div>
-<hr>
-    <h2>Pitched by {{user.username}}</h2>
+    </div>
+    <hr>
+        <h1>Pitched by {{user.username}}</h1>
     <hr>
         {% for pitch in pitches %}
-    <div class="card">
-    <h5 class="card-header">{{pitch.pitch}}</h5>
+<div class="card">
+    <h3 class="card-header">{{pitch.pitch}}</h5>
     <div class="card-body">
         <h4>{{pitch.category_id}}</h4>
         <p>{{pitch.content | truncate(70)}}</p>
-        <small><a class="article-readmore" href="{{url_for('main.pitch', id = pitch.id)}}">read more...</a></small><br>
-        <br>
-        <small>Category: <a class="article-category" href="{{url_for('main.pitch_category', category = pitch.category)}}">
-        {{pitch.category}}</a></small><br>
+        <small><a class="article-readmore" href="{{url_for('main.pitch', id = pitch.id)}}">read more...</a></small><br><br>
+        <small>Category: <a class="article-category" href="{{url_for('main.pitch_category', category = pitch.category)}}">{{pitch.category}}</a></small><br>
         <small>Author: <a class="article-category"href="{{url_for('main.profile', uname= pitch.user.username)}}">{{pitch.user.username}}</a></small><br>
         <small id="post-date">This pitch was posted on {{pitch.posted_date.strftime('%Y-%m-%d')}}</small><br>
     <div>
         <br>
         <a href="{{url_for('main.new_comment', id = pitch.id)}}">Leave Comments</a></span> 
-        <span class="foot" ><a href=""><i class="fa fa-thumbs-up" style="font-size:18px;color: rgb(0, 45, 128)"></i></a>0</span>
+        <span class="foot" ><a href=""><i class="fa fa-thumbs-up" style="font-size:18px;color: rgb(0, 55, 128)"></i></a>0</span>
         <span class="foot"><a href=""><i class="fa fa-thumbs-down" style="color:red;"></i></a>0</span>
     </div>
         <hr>
