@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+<!-- Content block -->
+
+{% block content %}
+<div class="container">
+    <div class="row">
+    <div class="col-md-3" id="categories-col">
+        {% include 'side-nav.html' %}
+    </div>
+    <div class="col-md-6"> 
+        <h2>New Pitches</h2>
+        <div class="row">
+            {% for message in  get_flashed_messages() %}
+            <div class="alert alert-warning">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% for pitch in pitches%}
+            <div class="col-md-4">
+                <img src="https://source.unsplash.com/125x125/?profile,photo" alt="this image" id="users-profile"></div>
+                <div class="col-md-8">
+            <div class="card">
+                <h3> class="card-header">{{pitch.pitch}}</h3>
+                <div class="card-body">
+                    <h3>{{pitch.category_id}}</h3>
+                        <p>{{pitch.content | truncate(70)}}</p>
+                        <small><a class="article-readmore" href="{{url_for('main.pitch', id = pitch.id)}}">read more...</a></small><br><br>
+                        <small>Category: 
+                            <a class="article-category" href="{{url_for('main.pitch_category',category = pitch.category)}}">{{pitch.category}}</a>
+                        </small><br>
+                        <small>Author:<a class="article-category"href="{{url_for('main.profile', uname= pitch.user.username)}}">
+                            {{pitch.user.username}}</a></small><br>
+                        <small id="post-date">posted on {{pitch.posted_date.strftime('%Y-%m-%d')}}</small><br>
+                <div>
+                    <br>
+                    <span class="foot" ><a href="{{url_for('main.new_comment', id = pitch.id)}}">Leave Comments</a></span> 
+                    <span class="foot" ><a href=""><i class="fa fa-thumbs-up" style="font-size:18px;color: rgb(179, 236, 179)"></i></a>0</span>
+                    <span class="foot"><a href=""><i class="fa fa-thumbs-down" style="color:rgb(241, 101, 101);"></i></a>0</span>
+                </div> 
+                <hr>
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+    <div class="col-md-3">
+        <h2>Find a Pitch</h2>
+        <form>
+            <input type="text" name="pitches_query" placeholder="find pitches" class="form-control">
+            <input type="submit"  value="Submit" class="btn btn-info" style="margin-top: 5px;">
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}
