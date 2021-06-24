@@ -1,0 +1,90 @@
+#heading{
+    color:#33ff00;
+}
+#heading-index{
+    color: #020211;
+}
+
+#nav-list{
+    list-style-type: none;
+    float: left;
+    overflow: hidden;
+    }
+
+ul#nav-list li{
+    display: inline-block;
+    padding: 8px;
+}
+
+.navbar{
+    background-color: #9b9bee52;
+    justify-content: space-between;
+}
+
+.prof-pic{
+    border-radius: 180px;
+    border: 2px solid white;
+    height: 60px;
+    width: 60px;
+}
+
+.navbar-brand{
+    color: white;
+}
+
+#pitch-categories{
+    list-style-type: none;
+    padding: 8px;
+}
+
+ul#pitch-categories li{
+    padding: 18px;
+}
+
+#interactive-layer{
+    list-style-type: none;
+    float: left;
+    overflow: hidden;
+}
+.foot{
+    padding: 16px;
+}
+#registration-form{
+    margin: 100px;
+    margin-top: 10px;
+    background-color: #f0ebcc;
+    padding: 100px;
+}
+.img_thumbnail{
+    height: 300px;
+    width: 300px;
+}
+#pp-submit-btn{
+    background-color: #77ACF1;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#user-bio{
+    margin-top: 15px;
+    border: 1px solid #3EDBF0;
+    margin-left: 0px;
+    padding: 10px;
+    padding-bottom: 120px;
+}
+#updateprof-btn{
+    background-color: #9cbeeb;
+}
+#bio-header{
+    border-bottom: hsl(187, 67%, 82%);
+}
+
+#users-profile{
+    height: 100px;
+    width: 100px;
+    border-radius: 180px;
+}
+#comment{
+    margin-bottom: 0px;
+}
