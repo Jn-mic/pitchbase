@@ -27,11 +27,16 @@ After extracting the files,
 >``source venv/bin/activate.``
 
 4. Running the application
->``python3 manage.py server``
+>``python3.8 manage.py server 
+       or
+    chmod a+x start.sh
+  ./start.sh
+
+``
 
 5. Running tests
 
- > ``python3 manage.py test.``
+ > ``python3.8 manage.py test.``
 
 ## Technologies used
 * Python3.8
@@ -58,7 +63,7 @@ After extracting the files,
 | Username  | Account username, ``eg Jack``|
 | Password  | Account password, ``eg Password``|
 
->Sign-up inputs
+>login inputs
 | Inputs |  Description |
 | Username  | Account username, ``eg john``|
 | Email  | User email, ``eg doty@testmail.com``|
