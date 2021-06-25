@@ -67,9 +67,7 @@ After extracting the files,
 
 > Pitches inputs
 
-| Inputs | Description 
-|  Heading | Pitch description eg; ``pickup lines``  |
-|  Pitch text| The actual pitch body|
+| Inputs | Description  | Find Pitches on submit
 | Comment| A comment on the pitch|
 
 ## License
