@@ -63,18 +63,6 @@ After extracting the files,
 | Username  | Account username, ``eg Jack``|
 | Password  | Account password, ``eg Password``|
 
->login inputs
-| Inputs |  Description |
-| Username  | Account username, ``eg john``|
-| Email  | User email, ``eg doty@testmail.com``|
-| Password  | Account password, ``eg password``|
-| Confirm Password  | Account password, ``eg password``|
-
-> Pitches inputs
-
-| Inputs | Description  | Find Pitches on submit
-| Comment| A comment on the pitch|
-
 ## License
 > MIT License &copy; 2021 Jack  Owuor.
 
